@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Main_Title">#3B97CE</color>
+    <color name="Score_Title">#DF3141</color>
+    <color name="blockColor">#DC143C</color>
+</resources>

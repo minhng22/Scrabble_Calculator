@@ -1,0 +1,216 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:paddingEnd="1dp"
+    android:paddingStart="1dp"
+    android:id="@+id/layout"
+    android:background="@drawable/tile">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/gridLayout">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageView2"
+            android:layout_column="0"
+            android:background="@drawable/star"
+            android:layout_gravity="left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/player"
+            android:id="@+id/playerNum"
+            android:layout_column="0"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/player_number_size"
+            android:textColor="@color/Main_Title"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:typeface="serif"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageView"
+            android:layout_column="0"
+            android:background="@drawable/star"
+            android:layout_columnWeight="0"
+            android:layout_rowWeight="0"
+            android:layout_gravity="right" />
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/score"
+            android:id="@+id/textView"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            android:textColor="@color/Score_Title"
+            android:textStyle="normal"
+            android:typeface="serif" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/default_score"
+            android:id="@+id/playerScoreTextView"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/score_size"
+            android:inputType="number"
+            android:paddingTop="5dp"
+            android:typeface="serif" />
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_row="4"
+            android:layout_column="0" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerWord"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:inputType="text"
+            android:singleLine="true"
+            android:maxLength="15"
+            android:editable="true"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/player_word_size"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="6"
+            android:layout_column="0">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/double_letter"
+                android:id="@+id/doubleLetter"
+                android:layout_weight="2"
+                android:nestedScrollingEnabled="false"
+                android:background="@drawable/roundbutton"
+                android:clickable="true"
+                android:typeface="serif"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/triple_letter"
+                android:id="@+id/tripleLetter"
+                android:layout_weight="2"
+                android:background="@drawable/roundbutton"
+                android:clickable="true"
+                android:typeface="serif"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/double_word"
+                android:id="@+id/doubleWord"
+                android:layout_weight="2"
+                android:background="@drawable/roundbutton"
+                android:clickable="true"
+                android:typeface="serif"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/bright_foreground_material_light" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/triple_word"
+                android:id="@+id/tripleWord"
+                android:layout_weight="2"
+                android:background="@drawable/roundbutton"
+                android:clickable="true"
+                android:typeface="serif"
+                android:elegantTextHeight="false"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="84dp"
+            android:layout_height="38dp"
+            android:text="@string/score_button"
+            android:id="@+id/scoreButton"
+            android:layout_below="@+id/gridLayout"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/blueroundbutton"
+            android:textSize="22dp"
+            android:singleLine="false"
+            android:capitalize="none"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:elegantTextHeight="false"
+            android:layout_row="7"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_column="0"
+            android:textAlignment="gravity"
+            android:layout_marginTop="10dp"
+            android:typeface="serif"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#c9010000"
+            android:textStyle="bold"
+            android:textColorHighlight="@color/accent_material_dark" />
+
+    </GridLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

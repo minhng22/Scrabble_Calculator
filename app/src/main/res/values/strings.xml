@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ScrabbleCalculator</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="player">Current Player</string>
+    <string name="score">Word Score</string>
+    <string name="default_score">0</string>
+    <string name ="double_word">2x Word</string>
+    <string name ="double_letter">2x Letter</string>
+    <string name ="triple_word">3x Word</string>
+    <string name ="triple_letter">3x Letter</string>
+    <string name ="score_button">Score</string>
+    <string name="title_activity_player_num">PlayerNum</string>
+    <string name="playerNum">Number of Players?</string>
+</resources>
